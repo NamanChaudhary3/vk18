@@ -1,0 +1,648 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK18 | The Era of King Kohli</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Slate 950 */
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        /* Animation for images on hover */
+        .card-image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Modal Animation */
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 300ms, transform 300ms;
+        }
+        .modal-exit {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .modal-exit-active {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 200ms, transform 200ms;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 selection:bg-blue-500/30 selection:text-blue-200">
+
+    <nav class="fixed w-full z-50 top-0 border-b border-white/5 bg-slate-950/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="text-white font-semibold tracking-tighter text-xl">VK<span class="text-blue-500">18</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="#stats" class="hover:text-white transition-colors duration-200">Statistics</a>
+                <a href="#innings" class="hover:text-white transition-colors duration-200">Masterclasses</a>
+                <a href="#milestones" class="hover:text-white transition-colors duration-200">Trophies</a>
+            </div>
+            <a href="https://www.instagram.com/virat.kohli" target="_blank" class="flex items-center gap-2 text-xs font-medium bg-white text-black px-3 py-1.5 rounded-full hover:bg-slate-200 transition-colors">
+                <span>Follow</span>
+                <iconify-icon icon="lucide:arrow-up-right" width="14" stroke-width="1.5"></iconify-icon>
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 overflow-hidden min-h-[85vh] flex flex-col justify-center">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop" 
+                 class="w-full h-full object-cover opacity-30" alt="Stadium Background">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/20 bg-blue-500/10 text-blue-400 text-xs font-medium mb-8 animate-fade-in-up">
+                <iconify-icon icon="lucide:crown" width="14" stroke-width="1.5"></iconify-icon>
+                <span>The Greatest of This Generation</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tight text-white mb-6 leading-[1.1]">
+                Chase <br class="md:hidden"> <span class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 to-blue-600">Master.</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-lg md:text-xl text-slate-400 leading-relaxed font-light mb-10">
+                Redefining consistency in modern cricket. From the streets of Delhi to the throne of World Cricket, an odyssey of passion, aggression, and unmatched excellence.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#innings" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-950 text-sm font-bold rounded-lg hover:bg-slate-200 transition-colors flex items-center justify-center gap-2">
+                    View Best Innings
+                    <iconify-icon icon="lucide:arrow-down" width="16" stroke-width="1.5"></iconify-icon>
+                </a>
+                <a href="#stats" class="w-full sm:w-auto px-8 py-4 glass-card hover:bg-white/5 text-slate-300 text-sm font-bold rounded-lg transition-colors border border-slate-800">
+                    Career Stats
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="stats" class="py-20 px-6 border-y border-white/5 bg-slate-950/50 relative z-20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-slate-800/50 rounded-xl overflow-hidden border border-slate-800 shadow-2xl">
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">84</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">Intl Centuries</span>
+                </div>
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">27,900+</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">Total Runs</span>
+                </div>
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">58+</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">ODI Average</span>
+                </div>
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">8</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">IPL Centuries</span>
+                </div>
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">7</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">Number of 200s in Test cricket</span>
+                </div>
+                <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight mb-2">46.85</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">Test batting average</span>
+                </div>
+                 <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-4xl font-semibold text-white tracking-tight mb-2">40 (Most by any Indian captain)</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">Test Wins as Captain</span>
+                </div>
+                 <div class="bg-slate-950 p-8 flex flex-col items-center justify-center group hover:bg-slate-900/50 transition-colors duration-300">
+                    <span class="text-4xl md:text-4xl font-semibold text-white tracking-tight mb-2"> 2017, 2018, 2019 (first captain till 2025)</span>
+                    <span class="text-xs font-medium uppercase tracking-widest text-slate-500 group-hover:text-blue-400 transition-colors">ICC Test Mace Titles</span>
+                </div>
+            </div>
+            <p class="text-center text-xs text-slate-600 mt-6">*Statistics updated 2025</p>
+        </div>
+    </section>
+
+    <section id="innings" class="py-24 px-6 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-3">Defining Masterclasses</h2>
+                    <p class="text-slate-400 max-w-md">12 innings across formats that didn't just win matches, but changed the psychology of modern cricket. <br><span class="text-blue-400 text-sm font-medium mt-2 inline-block">Click on any card to read the full story.</span></p>
+                </div>
+                <div class="flex gap-2">
+                    <button class="p-2 rounded-full border border-slate-800 text-slate-400 hover:text-white hover:border-slate-600 transition-all">
+                        <iconify-icon icon="lucide:filter" width="18" stroke-width="1.5"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
+                
+                <div onclick="openStory(1)" class="cursor-pointer lg:col-span-2 group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\virat-kohli-3.png" 
+                         alt="MCG Crowd" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/20 uppercase tracking-wide">T20 WC 2022</span>
+                            <span class="text-slate-300 text-xs">Melbourne</span>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white tracking-tight mb-2">82* vs Pakistan</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-lg mb-6">
+                            "Kohli goes down the ground!" The shot of the century off Haris Rauf. From 31/4 to an impossible victory in front of 90,000 people.
+                        </p>
+                        <div class="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 p-2 rounded-full backdrop-blur-md">
+                             <iconify-icon icon="lucide:book-open" class="text-white" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openStory(2)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\download.jpg" 
+                         alt="Cricket Pitch" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-yellow-500/20 text-yellow-500 border border-yellow-500/20 uppercase tracking-wide">CB Series 2012</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">133* vs Sri Lanka</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Chasing 320 in 40 overs to stay alive. He decimated Malinga. The birth of the Chase Master.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(3)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\images (4).jpg" 
+                         alt="Mohali Stadium" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/20 uppercase tracking-wide">T20 WC 2016</span>
+                            <span class="text-slate-300 text-xs">Mohali</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">82* vs Australia</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            A virtual quarter-final. The chase was calculated to perfection, running between wickets like a panther.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(4)" class="cursor-pointer lg:col-span-2 group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\gg.jpg" 
+                         alt="Rain Match" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+                    <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20">IPL Classic</div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-red-500/20 text-red-400 border border-red-500/20 uppercase tracking-wide">IPL 2016</span>
+                            <span class="text-slate-300 text-xs">Bengaluru</span>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white tracking-tight mb-2">113 vs KXIP</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-lg mb-6">
+                            The "Stitches" Inning. Playing with a split webbing in his hand, he smashed a 15-over century. Pure determination.
+                        </p>
+                        <div class="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 p-2 rounded-full backdrop-blur-md">
+                             <iconify-icon icon="lucide:book-open" class="text-white" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                 <div onclick="openStory(5)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                      <img src="D:\vk18\149.jpg" 
+                           alt="Test Match" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                      
+                      <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                          <div class="flex items-center gap-3 mb-3">
+                              <span class="px-2 py-1 rounded text-[10px] font-semibold bg-white/10 text-slate-200 border border-white/10 uppercase tracking-wide">Test 2018</span>
+                          </div>
+                          <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">149 vs England</h3>
+                          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                              Wickets falling around him, he stood tall with a gritty 149 at Edgbaston, burying the ghosts of 2014 forever.
+                          </p>
+                      </div>
+                  </div>
+
+                <div onclick="openStory(6)" class="cursor-pointer lg:col-span-2 group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\183.jpg" 
+                         alt="Night Match" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                         <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/20 uppercase tracking-wide">Asia Cup 2012</span>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white tracking-tight mb-2">183 vs Pakistan</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-lg mb-6">
+                            His highest ODI score. Chasing a mammoth 330 against arch-rivals Pakistan, Kohli constructed a masterclass inning off 148 balls.
+                        </p>
+                        <div class="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 p-2 rounded-full backdrop-blur-md">
+                             <iconify-icon icon="lucide:book-open" class="text-white" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="openStory(7)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\122.webp" 
+                         alt="Crowd cheering" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/20 uppercase tracking-wide">Asia Cup 2022</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">122* vs Afghanistan</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            The wait ended. The 71st Century came after 1,020 days, reminding the world that the King was back.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(8)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\100.jpg" 
+                         alt="Crowd" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/20 uppercase tracking-wide">ODI 2013</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">100* vs Australia</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            Jaipur. Fastest ODI century by an Indian (52 balls). Chased 360 like a walk in the park.
+                        </p>
+                    </div>
+                </div>
+
+                 <div onclick="openStory(9)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\100kkr.jpg" 
+                         alt="IPL Lights" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                     <div class="absolute top-4 right-4 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full z-20">IPL</div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-red-500/20 text-red-400 border border-red-500/20 uppercase tracking-wide">IPL 2019</span>
+                            <span class="text-slate-300 text-xs">Kolkata</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">100 vs KKR</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            A stunning century at Eden Gardens, pacing the innings perfectly in the death overs.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(10)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\141.jpg" 
+                         alt="Adelaide Oval" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-white/10 text-slate-200 border border-white/10 uppercase tracking-wide">Test 2014</span>
+                            <span class="text-slate-300 text-xs">Adelaide</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">141 vs Australia</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            First Test as captain. Chased 364 on Day 5, nearly pulling off a miracle. The aggression was born here.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(11)" class="cursor-pointer group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\235.webp" 
+                         alt="Wankhede" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-50">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-white/10 text-slate-200 border border-white/10 uppercase tracking-wide">Test 2016</span>
+                            <span class="text-slate-300 text-xs">Mumbai</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white tracking-tight mb-2">235 vs England</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                            A batting masterclass on a red-soil turner. Highest score by an Indian captain in Tests.
+                        </p>
+                    </div>
+                </div>
+
+                <div onclick="openStory(12)" class="cursor-pointer lg:col-span-1 group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 card-image-wrapper">
+                    <img src="D:\vk18\254.webp" 
+                         alt="Test Match Whites" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10"></div>
+                    
+                    <div class="relative z-20 h-full flex flex-col justify-end p-8">
+                         <div class="flex items-center gap-3 mb-3">
+                            <span class="px-2 py-1 rounded text-[10px] font-semibold bg-white/10 text-white border border-white/10 uppercase tracking-wide">Test 2019</span>
+                        </div>
+                        <h3 class="text-3xl font-semibold text-white tracking-tight mb-2">254* vs SA</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed max-w-lg mb-6">
+                            His highest Test score. A marathon inning of pure dominance.
+                        </p>
+                        <div class="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity bg-white/10 p-2 rounded-full backdrop-blur-md">
+                             <iconify-icon icon="lucide:book-open" class="text-white" width="20"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="milestones" class="py-24 px-6 border-t border-white/5 bg-slate-950">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">A Cabinet of Glory</h2>
+                <p class="text-slate-400">Major international trophies and records collected over a decade of dominance.</p>
+            </div>
+            
+            <h3 class="text-2xl font-semibold text-white tracking-tight mb-6 mt-4 border-b border-slate-800 pb-2">Team Trophies</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="flex flex-col items-center p-8 rounded-xl border border-slate-800 bg-slate-900/30 text-center hover:border-yellow-500/30 transition-colors group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-black mb-6 shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                        <iconify-icon icon="lucide:trophy" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">ICC World Cup 2011</h3>
+                    <p class="text-sm text-slate-500">The beginning of the dream. Carried Sachin Tendulkar on his shoulders.</p>
+                </div>
+                
+                <div class="flex flex-col items-center p-8 rounded-xl border border-slate-800 bg-slate-900/30 text-center hover:border-blue-500/30 transition-colors group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white mb-6 shadow-[0_0_20px_rgba(59,130,246,0.3)]">
+                        <iconify-icon icon="lucide:award" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">Champions Trophy 2013</h3>
+                    <p class="text-sm text-slate-500">Top scorer in the final. A crucial contribution in a rain-curtailed thriller.</p>
+                </div>
+                
+                <div class="flex flex-col items-center p-8 rounded-xl border border-slate-800 bg-slate-900/30 text-center hover:border-green-500/30 transition-colors group">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-slate-100 to-slate-300 flex items-center justify-center text-black mb-6 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <iconify-icon icon="lucide:crown" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2">ICC T20 World Cup 2024</h3>
+                    <p class="text-sm text-slate-500">Player of the Match in the Final. The perfect farewell to T20 Internationals.</p>
+                </div>
+
+                <div class="flex flex-col items-center p-8 rounded-xl border border-slate-800 bg-slate-900/30 text-center hover:border-red-500/30 transition-colors group relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-red-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-red-600 to-black flex items-center justify-center text-white mb-6 shadow-[0_0_20px_rgba(220,38,38,0.4)] relative z-10">
+                        <iconify-icon icon="lucide:trophy" width="24" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <h3 class="text-lg font-medium text-white mb-2 relative z-10">IPL 2025</h3>
+                    <p class="text-sm text-slate-500 relative z-10">The wait is over. The dream realized.Ee Sala Cup Namdu.
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-semibold text-white tracking-tight mb-6 border-t border-slate-800 pt-8">Individual Accolades & Records</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:star" class="text-yellow-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">Sir Garfield Sobers Trophy</span>
+                    </div>
+                    <p class="text-sm text-slate-500">ICC Cricketer of the Year <span class="text-white">(2017 & 2018)</span></p>
+                </div>
+
+                <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:zap" class="text-blue-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">Fastest to 10,000 ODI Runs</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Achieved in just <span class="text-white">205 innings</span></p>
+                </div>
+
+                <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:shield-check" class="text-red-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">ICC Test Player of the Year</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Winner in <span class="text-white">2018</span></p>
+                </div>
+                
+                <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:flame" class="text-orange-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">IPL Orange Cap (MVP)</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Record 973 Runs in <span class="text-white">2016</span></p>
+                </div>
+                
+                 <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:bar-chart-3" class="text-green-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">Most Centuries in ODIs</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Surpassing Sachin Tendulkar with <span class="text-white">50 Hundreds</span></p>
+                </div>
+
+                 <div class="p-5 glass-card flex flex-col justify-between hover:bg-slate-800/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-2">
+                        <iconify-icon icon="lucide:calendar-check" class="text-fuchsia-500 flex-shrink-0" width="20"></iconify-icon>
+                        <span class="text-slate-200 font-medium">ICC ODI Player of the Decade</span>
+                    </div>
+                    <p class="text-sm text-slate-500">Won the prestigious award for <span class="text-white">2010-2020</span></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 bg-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col gap-1">
+                <span class="text-white font-semibold tracking-tighter">VK18 Fan Tribute</span>
+                <span class="text-xs text-slate-600">Designed with passion for cricket.</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="story-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-slate-950/90 backdrop-blur-md transition-opacity" onclick="closeModal()"></div>
+        
+        <div id="modal-content" class="relative z-10 bg-slate-900 border border-slate-700 w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+            
+            <div class="relative h-48 md:h-64 flex-shrink-0">
+                <img id="modal-image" src="" alt="" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+                <button onclick="closeModal()" class="absolute top-4 right-4 bg-black/50 hover:bg-black/80 text-white rounded-full p-2 backdrop-blur transition-colors">
+                    <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+                </button>
+                <div class="absolute bottom-4 left-6 md:left-8 right-6">
+                    <span id="modal-tag" class="px-2 py-1 rounded text-[10px] md:text-xs font-semibold uppercase tracking-wide mb-2 inline-block"></span>
+                    <h2 id="modal-title" class="text-2xl md:text-4xl font-bold text-white tracking-tight leading-tight"></h2>
+                </div>
+            </div>
+
+            <div class="p-6 md:p-8 overflow-y-auto custom-scrollbar">
+                <p id="modal-text" class="text-slate-300 text-sm md:text-base leading-7 md:leading-8 whitespace-pre-line font-light"></p>
+                
+                <div class="mt-8 pt-6 border-t border-slate-800 flex justify-end">
+                    <button onclick="closeModal()" class="text-sm font-semibold text-slate-400 hover:text-white transition-colors">Close Story</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const stories = {
+            1: {
+                title: "82* vs Pakistan",
+                tag: "T20 World Cup 2022 | MCG",
+                color: "text-blue-400 bg-blue-500/20 border-blue-500/20",
+                img: "https://images.unsplash.com/photo-1624194065604-d326f3456c66?q=80&w=2000&auto=format&fit=crop",
+                text: "It was Diwali eve. 90,000 people at the MCG. The atmosphere was suffocating. \n\nIndia was reduced to 31/4 chasing 160 against a fearsome Pakistani pace attack. Kohli and Hardik Pandya rebuilt slowly, but the required rate climbed to impossible heights. 28 runs were needed off 8 balls. Haris Rauf, bowling at 150kmph, was reversing the ball.\n\nThen happened the shot that defied physics. Kohli backed away and punched a length ball back over the bowler's head for six. A straight six off the back foot against extreme pace. The next ball was flicked over fine leg for another six. \n\nThe equation came down to the final over. A no-ball, a free hit, a scramble for byes, and Ashwin's calm finish sealed it. Kohli punched the ground, tears in his eyes. He later said, \"I have no idea how that happened. It was destiny.\""
+            },
+            2: {
+                title: "133* vs Sri Lanka",
+                tag: "CB Series 2012 | Hobart",
+                color: "text-yellow-500 bg-yellow-500/20 border-yellow-500/20",
+                img: "https://images.unsplash.com/photo-1593341646782-e0b495cffd32?q=80&w=2000&auto=format&fit=crop",
+                text: "This was the night the boy became the King. To stay alive in the tri-series, India didn't just need to chase 320; they needed to chase it inside 40 overs to get the bonus point.\n\nSri Lanka had Lasith Malinga in his prime. Kohli didn't care. He walked in and played arguably the greatest ODI inning by a chaser. The 35th over by Malinga went for 24 runs—Kohli whipping yorkers with wrists of steel. \n\nHe finished with 133* off just 86 balls. India chased 320 in just 36.4 overs. It was a massacre that signaled the changing of the guard in Indian cricket."
+            },
+            3: {
+                title: "82* vs Australia",
+                tag: "T20 World Cup 2016 | Mohali",
+                color: "text-blue-400 bg-blue-500/20 border-blue-500/20",
+                img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2067&auto=format&fit=crop",
+                text: "A virtual quarter-final. Chasing 161 on a gripping pitch, India was struggling. Yuvraj Singh was injured at the other end, unable to run fast. Kohli had to calculate every single run.\n\nWhat followed was a running masterclass. He converted ones into twos with electric speed. In the final few overs, he exploded. He took on James Faulkner and Nathan Coulter-Nile, finding gaps with surgical precision. \n\nHe dropped to his knees after hitting the winning runs, exhausted but triumphant. It was an innings of pure intellect and fitness."
+            },
+            4: {
+                title: "113 vs KXIP",
+                tag: "IPL 2016 | Bengaluru",
+                color: "text-red-400 bg-red-500/20 border-red-500/20",
+                img: "https://images.unsplash.com/photo-1562077772-3bd305261997?q=80&w=2000&auto=format&fit=crop",
+                text: "The IPL 2016 season is the stuff of legend (973 runs), but this inning stood out for its grit. Kohli had split the webbing in his left hand in a previous match and had 8 stitches.\n\nThe match was reduced to 15 overs due to rain. Pain was visible on his face every time the ball hit the bat. Yet, he opened the batting and unleashed carnage. He pointed to his stitches after reaching his century—which he scored in a 15-over game! \n\nHe scored 113 off 50 balls. It was superhuman."
+            },
+            5: {
+                title: "149 vs England",
+                tag: "Test Series 2018 | Edgbaston",
+                color: "text-slate-200 bg-white/10 border-white/10",
+                img: "https://images.unsplash.com/photo-1590138972837-251c4e771b78?q=80&w=1500&auto=format&fit=crop",
+                text: "In 2014, Kohli averaged 13 in England. James Anderson had destroyed his confidence. Four years later, he returned as captain with a point to prove.\n\nWickets tumbled around him. Anderson swung the ball hoops. Kohli was dropped early, but he tightened his technique, playing close to his body. As partners ran out, he started farming the strike. \n\nHe scored 149 out of India's 274. The roar upon reaching the century, kissing the ring on his necklace, told the story of redemption. He had conquered his final frontier."
+            },
+            6: {
+                title: "183 vs Pakistan",
+                tag: "Asia Cup 2012 | Mirpur",
+                color: "text-blue-400 bg-blue-500/20 border-blue-500/20",
+                img: "https://images.unsplash.com/photo-1631194758628-71ec7c35137e?q=80&w=2000&auto=format&fit=crop",
+                text: "Chasing 330 against Pakistan is never just a game; it's a war. Pakistan had posted a massive total thanks to Hafeez and Jamshed.\n\nKohli walked in at 0/1. What followed was his highest ODI score to date. He dismantled the spin of Saeed Ajmal (who was a mystery back then) and the pace of Umar Gul. \n\nHe scored 183 off 148 balls, hitting 22 fours. He fell just before the finish line, but he had single-handedly broken the back of the chase. It remains the highest score by a batsman in Asia Cup history."
+            },
+            7: {
+                title: "122* vs Afghanistan",
+                tag: "Asia Cup 2022 | Dubai",
+                color: "text-blue-400 bg-blue-500/20 border-blue-500/20",
+                img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=2000&auto=format&fit=crop",
+                text: "1,020 days. That's how long the world waited for the 71st century. Critics said he was finished. \n\nOpening the batting in a dead rubber match, Kohli played with a freedom we hadn't seen in years. He danced down the track, pulled with authority, and finally, with a six over deep mid-wicket, the drought ended.\n\nA smile of relief, a kiss to the ring, and a bow to the crowd. The King was back. This 122* laid the foundation for his dominance in the subsequent T20 World Cup."
+            },
+            8: {
+                title: "100* vs Australia",
+                tag: "ODI Series 2013 | Jaipur",
+                color: "text-orange-400 bg-orange-500/20 border-orange-500/20",
+                img: "https://images.unsplash.com/photo-1599586120429-48285b6a8a24?q=80&w=2000&auto=format&fit=crop",
+                text: "Australia posted 359. In 2013, that was considered unchaseable. India's openers (Rohit and Dhawan) gave a great start, but Kohli turned it into a mockery.\n\nHe walked in and simply didn't defend. He smashed the fastest ODI century by an Indian—off just 52 balls. It was brutal, clean hitting. \n\nIndia chased 360 with 6 overs to spare and 9 wickets in hand. It was the day 350+ scores stopped being safe against India."
+            },
+            9: {
+                title: "100 vs KKR",
+                tag: "IPL 2019 | Kolkata",
+                color: "text-red-400 bg-red-500/20 border-red-500/20",
+                img: "https://images.unsplash.com/photo-1512719994953-eabf50895df7?q=80&w=2000&auto=format&fit=crop",
+                text: "Eden Gardens. A slow pitch. Kohli struggled initially, scoring just a run-a-ball fifty. He looked visibly frustrated.\n\nThen came the switch. In the last 5 overs, he went berserk against Kuldeep Yadav and Prasidh Krishna. He accelerated from 50 to 100 in just the next few balls, showing his ability to shift gears seamlessly. \n\nHe brought up his century on the last ball of the innings. It was a lesson in pacing a T20 innings."
+            },
+            10: {
+                title: "141 vs Australia",
+                tag: "Test Series 2014 | Adelaide",
+                color: "text-slate-200 bg-white/10 border-white/10",
+                img: "https://images.unsplash.com/photo-1629213495475-4084f7253573?q=80&w=2000&auto=format&fit=crop",
+                text: "His first Test as captain (standing in for Dhoni). Australia set a target of 364 on a turning Day 5 pitch. Most captains would play for a draw.\n\nKohli went for the win. He scored 115 in the first innings and backed it up with a stunning 141 in the second. He swept Nathan Lyon, drove Mitchell Johnson, and took India to the brink of victory.\n\nIndia lost by 48 runs after a collapse, but Kohli's philosophy was established that day: We play to win, at any cost."
+            },
+            11: {
+                title: "235 vs England",
+                tag: "Test Series 2016 | Mumbai",
+                color: "text-slate-200 bg-white/10 border-white/10",
+                img: "https://images.unsplash.com/photo-1595210329266-5d58f2679dc3?q=80&w=2000&auto=format&fit=crop",
+                text: "The Wankhede pitch was a red-soil turner. Anderson and Rashid were bowling well. India needed a lead.\n\nKohli put on a clinic of batting against spin. He used the crease depth to perfection. While other batters struggled to defend, he was driving against the spin. \n\nHe scored 235—the highest score by an Indian captain in Tests. Jayant Yadav scored a century at the other end simply by watching Kohli play. India won by an innings and 36 runs."
+            },
+            12: {
+                title: "254* vs South Africa",
+                tag: "Test Series 2019 | Pune",
+                color: "text-slate-200 bg-white/10 border-white/10",
+                img: "https://images.unsplash.com/photo-1515523110800-9415d13b84a8?q=80&w=2000&auto=format&fit=crop",
+                text: "Kohli's highest Test score. It was a marathon of concentration. He batted for nearly two days, grinding the South African bowlers into dust.\n\nHe ran hard even after passing 200. The innings included 33 fours and 2 sixes. He declared the innings the moment he felt India had enough, putting the team ahead of personal milestones (he could have easily scored 300).\n\nIt was the peak of his 'Daddy Hundred' era."
+            }
+        };
+
+        const modal = document.getElementById('story-modal');
+        const modalContent = document.getElementById('modal-content');
+        
+        function openStory(id) {
+            const story = stories[id];
+            
+            // Populate Data
+            document.getElementById('modal-title').innerText = story.title;
+            document.getElementById('modal-text').innerText = story.text;
+            document.getElementById('modal-image').src = story.img;
+            
+            const tag = document.getElementById('modal-tag');
+            tag.innerText = story.tag;
+            tag.className = `px-2 py-1 rounded text-[10px] md:text-xs font-semibold uppercase tracking-wide mb-2 inline-block border ${story.color}`;
+
+            // Show Modal
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Animate In
+            requestAnimationFrame(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            });
+            
+            // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            // Animate Out
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
+
